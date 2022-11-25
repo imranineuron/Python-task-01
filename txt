@@ -23,25 +23,24 @@ def get_password_strength(username,password):
             if i!=(len(password)-1):
                 if num[((num.index(password[i]))+1)]==password[i+1]:
                         nc_flag=False
-        if c_flag and s_flag :
-                        c+=1
-        if n_flag and nc_flag :
-                        c+=1
-        if not password.isalnum():
-                        c+=1
-        if c==4:
-                        
-                        print('very strong')
-                        return
-        if c==3:
-                        print('strong')
-                        return
-        if c==2:
-                        print('moderate')
-                        return
-        if c==1:
-                        print('week')
-                        return
-        if c==0:
-                        print('use a different password')
-                        return
+    if c_flag and s_flag :
+        c+=1
+    if n_flag and nc_flag :
+        c+=1
+    if not password.isalnum():
+        c+=1
+    if c==4:
+        print('very strong')
+        return
+    if c==3:
+        print('strong')
+        return
+    if c==2:
+        print('moderate')
+        return
+    if c==1:
+        print('week')
+        return
+    if c==0:
+        print('use a different password')
+        return
